@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" type="text/css" href="cube.css">
+        <title>Кубик Рубика</title>
+    </head>
+    <body>
+        <h1>Кубик Рубика</h1>
+        <div id="cont">
+            <div id="b" class="side">
+                <div><input data-num="00"/><input data-num="01"/><input data-num="02"/></div>
+                <div><input data-num="10"/><input value="blue" style="background-color: blue" data-num="11" readonly/><input data-num="12"/></div>
+                <div><input data-num="20"/><input data-num="21"/><input data-num="22"/></div>
+            </div>
+            <div id="o" class="side">
+                <div><input data-num="00"/><input data-num="01"/><input data-num="02"/></div>
+                <div><input data-num="10"/><input value="orange" style="background-color: orange" data-num="11" readonly/><input data-num="12"/></div>
+                <div><input data-num="20"/><input data-num="21"/><input data-num="22"/></div>
+            </div>
+            <div id="w" class="side">
+                <div><input data-num="00"/><input data-num="01"/><input data-num="02"/></div>
+                <div><input data-num="10"/><input value="white" style="background-color: white" data-num="11" readonly/><input data-num="12"/></div>
+                <div><input data-num="20"/><input data-num="21"/><input data-num="22"/></div>
+            </div>
+            <div id="r" class="side">
+                <div><input data-num="00"/><input data-num="01"/><input data-num="02"/></div>
+                <div><input data-num="10"/><input value="red" style="background-color: red" data-num="11" readonly/><input data-num="12"/></div>
+                <div><input data-num="20"/><input data-num="21"/><input data-num="22"/></div>
+            </div>
+            <div id="g" class="side">
+                <div><input data-num="00"/><input data-num="01"/><input data-num="02"/></div>
+                <div><input data-num="10"/><input value="green" style="background-color: green" data-num="11" readonly/><input data-num="12"/></div>
+                <div><input data-num="20"/><input data-num="21"/><input data-num="22"/></div>
+            </div>
+            <div id="y" class="side">
+                <div><input data-num="00"/><input data-num="01"/><input data-num="02"/></div>
+                <div><input data-num="10"/><input value="yellow" style="background-color: yellow" data-num="11" readonly/><input data-num="12"/></div>
+                <div><input data-num="20"/><input data-num="21"/><input data-num="22"/></div>
+            </div>
+            <div><button class="btn">Решить</button></div>
+        </div>
+        <script src="cube.js"></script>
+    </body>
+</html>

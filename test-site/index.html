@@ -30,7 +30,31 @@
                     <tbody id="table-container"></tbody>
                 </table>
             </div>
-            <div id="modal-container"><h1>Открыто!!!</h1></div>
+            <div id="modal-wrapper">
+                <div id="modal-container">
+                    <h2>Добавить/Редактировать</h2>
+                    <div class="image">Фотография</div>
+                    <input type="text" id="name" placeholder="Имя" />
+                    <input type="text" id="last-name" placeholder="Фамилия" />
+                    <input type="date" id="date-of-birth" placeholder="Дата рождения" />
+                    <form id="post">
+                        <select name="post">
+                            <option value="accountant">Бухгалтер</option>
+                            <option value="programmer">Программист</option>
+                            <option value="technician">Техник</option>
+                        </select>
+                    </form>
+                    <label for="remote" id="remote-label">Удаленка</label>
+                    <input type="checkbox" id="remote-input" name="remote" />
+                    <input type="text" id="city" placeholder="Город" />
+                    <input type="text" id="street" placeholder="Улица" />
+                    <input type="number" id="house" placeholder="Дом" />
+                    <input type="number" id="flat" placeholder="Квартира" />
+                    <button class="btn" id="save">Сохранить</button>
+                    <button class="btn" id="close">Закрыть</button>
+                </div>
+            </div>
+            <div id="alert"></div>
             <script src="test.js"></script>
         </div>
     </body>

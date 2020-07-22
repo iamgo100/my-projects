@@ -21,44 +21,44 @@ tr {
     cursor: pointer;
 }
 
-/* .square-cell {
-    width: 100px;
-}
-
-.small-cell {
-    width: 80px;
-}
-
-.ordinary-cell {
-    width: 120px;
-}
-
-.long-cell {
-    width: 170px;
-} */
-
-#modal-wrapper {
-    background-color: rgba(60, 60, 60 ,0.8);
+.wrapper {
     position: fixed;
     top: 0px;
     left: 0px;
     margin: 0px;
     padding: 20px 10px;
     justify-content: center;
-    align-items: center;
     width: 100%;
     height: 100%;
-    overflow-y: scroll;
     display: none;
 }
 
-#modal-wrapper.open {
+.open {
     display: flex;
 }
 
-#modal-container {
+#w-modal {
+    background-color: rgba(60, 60, 60 ,0.8);
+    align-items: center;
+    overflow-y: scroll;
+}
+
+#c-modal {
     background-color: antiquewhite;
     padding: 20px;
     margin: 5px;
     width: 70%;
+}
+
+#w-warning {
+    background-color: rgba(255, 255, 255 ,0.0);
+    align-items: top;
+}
+
+#c-warning {
+    background-color: antiquewhite;
+    border: #666666;
+    border-radius: 5px;
+    width: 30%;
+    color: #0640fa;
 }

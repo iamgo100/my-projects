@@ -7,7 +7,7 @@
     </head>
     <body>
         <div id="container">
-            <div id="search"><input value="Поиск, которого пока нет" /></div>
+            <div id="search"><input type="search" placeholder="Поиск, которого пока нет" /></div>
             <div id="buttons">
                 <button class="btn" id="add">Добавить</button>
                 <button class="btn" id="update">Редактировать</button>
@@ -17,25 +17,25 @@
                 <table>
                     <thead>
                         <tr>
-                            <th class="square-cell">Превью</th>
-                            <th class="ordinary-cell">Имя</th>
-                            <th class="ordinary-cell">Фамилия</th>
-                            <th class="ordinary-cell">Дата рождения</th>
-                            <th class="small-cell">Возраст</th>
-                            <th class="ordinary-cell">Должность</th>
-                            <th class="small-cell">Удаленная работа</th>
-                            <th class="long-cell">Адрес проживания</th>
+                            <th>Превью</th>
+                            <th>Имя</th>
+                            <th>Фамилия</th>
+                            <th>Дата рождения</th>
+                            <th>Возраст</th>
+                            <th>Должность</th>
+                            <th>Удаленная работа</th>
+                            <th>Адрес проживания</th>
                         </tr>
                     </thead>
-                    <tbody id="table-container"></tbody>
+                    <tbody id="c-table"></tbody>
                 </table>
             </div>
-            <div id="modal-wrapper">
-                <div id="modal-container">
+            <div id="w-modal" class="wrapper">
+                <div id="c-modal">
                     <h2>Добавить/Редактировать</h2>
                     <div class="image">Фотография</div>
-                    <input type="text" id="name" placeholder="Имя" />
-                    <input type="text" id="last-name" placeholder="Фамилия" />
+                    <input id="name" placeholder="Имя" />
+                    <input id="last-name" placeholder="Фамилия" />
                     <input type="date" id="date-of-birth" placeholder="Дата рождения" />
                     <form id="post">
                         <select name="post">
@@ -46,15 +46,21 @@
                     </form>
                     <label for="remote" id="remote-label">Удаленка</label>
                     <input type="checkbox" id="remote-input" name="remote" />
-                    <input type="text" id="city" placeholder="Город" />
-                    <input type="text" id="street" placeholder="Улица" />
+                    <input id="city" placeholder="Город" />
+                    <input id="street" placeholder="Улица" />
                     <input type="number" id="house" placeholder="Дом" />
                     <input type="number" id="flat" placeholder="Квартира" />
-                    <button class="btn" id="save">Сохранить</button>
-                    <button class="btn" id="close">Закрыть</button>
+                    <button class="btn" class="save" id="ms">Сохранить</button>
+                    <button class="btn" class="close" id="mc">Закрыть</button>
                 </div>
             </div>
-            <div id="alert"></div>
+            <div id="w-warning" class="wrapper">
+                <div id="c-warning">
+                    <h6>Вы не сохранили данные!</h6>
+                    <button class="btn" class="save" id="ws">Сохранить</button>
+                    <button class="btn" class="close" id="wc">Закрыть</button>
+                </div>
+            </div>
             <script src="test.js"></script>
         </div>
     </body>

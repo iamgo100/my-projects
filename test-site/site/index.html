@@ -32,33 +32,45 @@
             </div>
             <div id="w-modal" class="wrapper">
                 <div id="c-modal">
-                    <h2>Добавить/Редактировать</h2>
-                    <div class="image">Фотография</div>
-                    <input id="name" placeholder="Имя" />
-                    <input id="last-name" placeholder="Фамилия" />
-                    <input type="date" id="date-of-birth" placeholder="Дата рождения" />
-                    <form id="post">
-                        <select name="post">
-                            <option value="accountant">Бухгалтер</option>
-                            <option value="programmer">Программист</option>
-                            <option value="technician">Техник</option>
-                        </select>
-                    </form>
-                    <label for="remote" id="remote-label">Удаленка</label>
-                    <input type="checkbox" id="remote-input" name="remote" />
-                    <input id="city" placeholder="Город" />
-                    <input id="street" placeholder="Улица" />
-                    <input type="number" id="house" placeholder="Дом" />
-                    <input type="number" id="flat" placeholder="Квартира" />
-                    <button class="btn" class="save" id="ms">Сохранить</button>
-                    <button class="btn" class="close" id="mc">Закрыть</button>
+                    <div><h2>Добавить/Редактировать</h2></div>
+                    <div id="view">
+                        <div id="image" class="block"><p>Фотография</p></div>
+                        <div class="block">
+                            <input id="name" placeholder="Имя" />
+                            <input id="last-name" placeholder="Фамилия" />
+                            <input type="date" id="date-of-birth" placeholder="Дата рождения" />
+                            <form id="post">
+                                <select name="post">
+                                    <option value="accountant">Бухгалтер</option>
+                                    <option value="programmer">Программист</option>
+                                    <option value="technician">Техник</option>
+                                </select>
+                            </form>
+                            <div>
+                                <label for="remote" id="remote-label">Удаленка</label>
+                                <input type="checkbox" id="remote-input" name="remote" />
+                            </div>
+                        </div>
+                        <div class="block">
+                            <input id="city" placeholder="Город" />
+                            <input id="street" placeholder="Улица" />
+                            <input type="number" id="house" placeholder="Дом" />
+                            <input type="number" id="flat" placeholder="Квартира" />
+                        </div>
+                    </div>
+                    <div id="buttons-view">
+                        <button class="btn save" id="ms">Сохранить</button>
+                        <button class="btn close" id="mc">Закрыть</button>
+                    </div>
                 </div>
             </div>
             <div id="w-warning" class="wrapper">
                 <div id="c-warning">
-                    <h6>Вы не сохранили данные!</h6>
-                    <button class="btn" class="save" id="ws">Сохранить</button>
-                    <button class="btn" class="close" id="wc">Закрыть</button>
+                    <div><h2>Вы не сохранили данные!</h2></div>
+                    <div>
+                        <button class="btn save" id="ws">Сохранить</button>
+                        <button class="btn close" id="wc">Закрыть</button>
+                    </div>
                 </div>
             </div>
             <script src="test.js"></script>

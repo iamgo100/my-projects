@@ -9,8 +9,18 @@ thead {
 
 tr {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
+}
+
+th {
+    text-align: center;
+    border: solid 1px #666;
+    padding: 5px;
+}
+
+td {
+    text-align: center;
+    border: solid 1px #666;
+    padding: 5px;
 }
 
 h2 {
@@ -19,6 +29,17 @@ h2 {
 
 div {
     margin-top: 10px;
+}
+
+p {
+    margin: 0px;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    align-self: center;
 }
 
 .btn {

@@ -1,0 +1,19 @@
+[
+    {
+        "id": 1,
+        "image": "/images/staffer-1.jpg",
+        "preview": "/images/preview-1.jpg",
+        "name": "Василий",
+        "lastName": "Звездочкин",
+        "dateOfBirth": "1995-03-23",
+        "age": "25",
+        "post": "Программист",
+        "remote": "true",
+        "address": {
+            "city": "Санкт-Петербург",
+            "street": "ул. Бассейная",
+            "house": "15",
+            "flat": "43"
+        }
+    }
+]

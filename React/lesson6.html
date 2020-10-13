@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <title>React JS</title>
+        <script src="js/react.development.js"></script>
+        <script src="js/react-dom.development.js"></script>
+    
+        <!-- Don't use this in production: -->
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="program"></div>
+
+        <script type="text/babel">
+            const app = document.getElementById('program');
+
+            class Task extends React.Component {
+                constructor (props) {
+                    super(props);
+                    this.state = {edit: false};
+                };
+
+                edit = () => {
+                    this.setState({edit: true});
+                };
+
+                remove = () => {
+                    this.props.del(this.props.index);
+                };
+
+                save = () => {
+                    this.props.update(this.refs.newText.value, this.props.index);
+                    this.setState({edit: false});
+                };
+
+                rendNorm = () => {
+                    return (
+                        <div className="box">
+                            <div className="text">{this.props.children}</div>
+                            <div>
+                                <button onClick={this.edit} className="btn light">Редактировать</button>
+                                <button onClick={this.remove} className="btn red">Удалить</button>
+                            </div>
+                        </div>
+                    );
+                };
+
+                rendEdit = () => {
+                    return (
+                        <div className="box">
+                            <textarea ref="newText" defaultValue={this.props.children} placeholder="Введите задание" />
+                            <button onClick={this.save} className="btn success">Сохранить</button>
+                        </div>
+                    );
+                };
+
+                render = () => {
+                    if (this.state.edit) {
+                        return this.rendEdit();
+                    } else {
+                        return this.rendNorm();
+                    };
+                };
+            };
+            
+            class Field extends React.Component {
+                constructor (props) {
+                    super(props);
+                    this.state = {
+                        tasks: []
+                    };
+                };
+
+                addTask = (text) => {
+                    const arr = this.state.tasks;
+                    arr.push(text);
+                    this.setState({tasks: arr});
+                };
+
+                deleteTask = (ind) => {
+                    const arr = this.state.tasks;
+                    arr.splice(ind, 1);
+                    this.setState({tasks: arr});
+                };
+
+                updateText = (text, ind) => {
+                    const arr = this.state.tasks;
+                    if (!text) {
+                        arr[ind] = `Задание ${ind}`;
+                    } else {
+                        arr[ind] = text;
+                    };
+                    this.setState({tasks: arr});
+                };
+
+                eachTask = (task, ind) => {
+                    return (
+                        <Task key={ind} index={ind} update={this.updateText} del={this.deleteTask}>
+                            {task}
+                        </Task>
+                    );
+                };
+
+                render = () => {
+                    return (
+                        <div className="field">
+                            <button onClick={this.addTask.bind(null, 'Новое задание')} className="btn new">
+                                Добавить новое задание
+                            </button>
+                            {this.state.tasks.map(this.eachTask)}
+                        </div>
+                    );
+                };
+            };
+
+            ReactDOM.render(<Field />, app);
+        </script>
+    </body>
+</html>

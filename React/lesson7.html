@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>React JS</title>
+        <script src="js/react.development.js"></script>
+        <script src="js/react-dom.development.js"></script>
+    
+        <!-- Don't use this in production: -->
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="program"></div>
+
+        <script type="text/babel">
+            const app = document.getElementById('program');
+
+            class Check extends React.Component {
+                constructor (props) {
+                    super (props);
+                    this.state = {checked: true};
+                };
+
+                handleMessage = () => {
+                    this.setState({checked: !this.state.checked});
+                };
+
+                render() {
+                    let message;
+                    if (this.state.checked) {
+                        message = 'выбран';
+                    } else {
+                        message = 'не выбран';
+                    };
+                    return (
+                        <div>
+                            <input type="checkbox" onChange={this.handleMessage} defaultChecked={this.state.checked} />
+                            <p>Чекбокс {message}</p>
+                        </div>
+                    );
+                };
+            };
+            
+            ReactDOM.render(<Check />, app);
+        </script>
+    </body>
+</html>
